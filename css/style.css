@@ -39,5 +39,15 @@ header.masthead {
 .large-button:hover {
 	background-color: #666;
 }
+header.masthead .intro-text .intro-heading {
+    font-size: 40px;
+}
+
+@media (min-width:768px){
+    header.masthead .intro-text .intro-heading {
+        font-size: 70px;
+    }
+}
+
 
 
