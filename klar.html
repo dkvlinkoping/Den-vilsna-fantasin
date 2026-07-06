@@ -207,6 +207,20 @@
     <script src="js/agency.min.js"></script>
     <script src="./scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+     <div id="hidden-counter" style="display:none;" aria-hidden="true">0</div>
+    <script>
+      (function () {
+        const key = 'klarPageHiddenCounter';
+        let count = 0;
+        try {
+          count = Number(localStorage.getItem(key) || '0') + 1;
+          localStorage.setItem(key, String(count));
+        } catch (error) {
+          count = 1;
+        }
+        document.getElementById('hidden-counter').textContent = count;
+      })();
+    </script>
   <!-- Core theme JS-->
 
 </body>
